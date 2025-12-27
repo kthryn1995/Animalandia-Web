@@ -1,0 +1,13 @@
+/* ===============================
+   CARRUSEL PRINCIPAL
+   =============================== */
+
+.hero {
+    max-height: 150px;       /* altura total del carrusel */
+    overflow: hidden;
+}
+
+.carousel-img {
+    height: 150px;           /* MISMA altura */
+    object-fit: cover;       /* recorta sin deformar */
+}

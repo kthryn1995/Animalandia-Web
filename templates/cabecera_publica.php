@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS propios -->
-    <link rel="stylesheet" href="src/css/templates.css">
+    <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/templates.css">
 
 <!-- Tipografia -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
