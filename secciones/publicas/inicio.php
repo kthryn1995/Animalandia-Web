@@ -1,5 +1,5 @@
 <?php include("../../templates/cabecera_publica.php"); ?>
-
+<link rel="stylesheet" href="/AnimalandiaWeb/src/css/inicio.css">
 
 <main class="contenido">
 
@@ -8,23 +8,63 @@
 
 <!--carrusel-->
 
+
 <section class="hero">
   <div id="carouselAnimalandia" class="carousel slide" data-bs-ride="carousel">
 
     <div class="carousel-inner">
+
+      <!-- SLIDE 1 -->
       <div class="carousel-item active">
-        <img src="../../src/img/carrusel/banner1.jpg" class="d-block w-100 carousel-img" alt="Rescate">
+        <img src="../../src/img/carrusel/bienvenidaanimalandia.png"
+             class="d-block w-100 carousel-img"
+             alt="Bienvenida">
+
+        <div class="carousel-overlay">
+          <h2>Bienvenidos a Animalandia</h2>
+        </div>
       </div>
 
+      <!-- SLIDE 2 (Adopta o Apadrina) -->
       <div class="carousel-item">
-        <img src="../../src/img/carrusel/bienvenidos.png" class="d-block w-100 carousel-img" alt="Adopción">
+        <img src="../../src/img/carrusel/adoptaoapadrina5.png"
+             class="d-block w-100 carousel-img"
+             alt="Adopción">
+
+        <div class="carousel-overlay left">
+          <h2>Adopta o Apadrina</h2>
+
+          <div class="carousel-buttons">
+           <a href="adopciones.php" class="btn btn-primary" > Buscar en línea</a>
+
+            </a>
+            <a href="https://wa.me/573153954727" target="_blank" class="btn btn-outline-light">
+              Visitar el refugio
+            </a>
+          </div>
+        </div>
       </div>
 
+      <!-- SLIDE 3 -->
       <div class="carousel-item">
-        <img src="../../src/img/carrusel/banner3.jpg" class="d-block w-100 carousel-img" alt="Ayuda">
-      </div>
+  <img src="../../src/img/carrusel/donaciones.png"
+       class="d-block w-100 carousel-img"
+       alt="Donaciones">
+
+  <div class="carousel-overlay left">
+    <h2>Tu ayuda cambia vidas</h2>
+
+    <div class="carousel-buttons">
+      <a href="/AnimalandiaWeb/secciones/publicas/comoayudar.php"
+         class="btn btn-primary">
+        Donar ahora
+      </a>
     </div>
+  </div>
+</div>
 
+
+    <!-- CONTROLES -->
     <button class="carousel-control-prev" type="button"
             data-bs-target="#carouselAnimalandia" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -37,6 +77,9 @@
 
   </div>
 </section>
+
+
+
 
 
 
@@ -57,7 +100,7 @@
     <div class="col-md-4">
       <a href="apadrina.php" class="ayuda-card">
         <img src="../../src/img/ayuda/apadrina.png">
-        <h5>apadrina</h5>
+        <h5>Apadrina</h5>
       </a>
     </div>
 
