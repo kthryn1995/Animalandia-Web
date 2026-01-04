@@ -1,5 +1,5 @@
 <?php include("../../templates/cabecera_publica.php"); ?>
-<link rel="stylesheet" href="/AnimalandiaWeb/src/css/inicio.css">
+<link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/inicio.css">
 
 <main class="contenido">
 
@@ -116,21 +116,99 @@
 
 
 
-
-
-
-
-<section class="noticias container">
-  <h2>Noticias de interés</h2>
+<section class="noticias container my-5">
+  <h2 class="section-title">Noticias de interés</h2>
 
   <div class="row mt-4">
-    <div class="col-md-4 noticia-card">
-      <h5>Jornada de adopción</h5>
-      <p>Próximamente realizaremos una jornada...</p>
-      <a href="#">Ver más</a>
+
+    <!-- NOTICIA (izquierda) -->
+    <div class="col-md-6">
+      <div class="noticia-card">
+        <img src="../../src/img/noticias/jornada.jpg" alt="Jornada de adopción">
+
+        <div class="noticia-body">
+          <h5>Jornada de adopción</h5>
+          <p>
+            Próximamente realizaremos una jornada de adopción para brindar
+            un hogar a muchos peluditos.
+          </p>
+
+          <a href="#" class="noticia-link">Ver más</a>
+        </div>
+      </div>
     </div>
+
+    <!-- INSTAGRAM (derecha) -->
+    <div class="col-md-6">
+      <div class="instagram-card">
+        <img src="../../src/img/noticias/instagramnoticias.png" alt="Instagram Animalandia">
+
+        <div class="instagram-body">
+          <h5>Síguenos en Instagram</h5>
+          <p>
+            Entérate de todas nuestras noticias, rescates,
+            jornadas y adopciones.
+          </p>
+
+          <a href="https://www.instagram.com/animalandia.38/"
+             target="_blank"
+             class="btn btn-instagram">
+            Ir a Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+
+<section class="sobre-nosotros-animalandia">
+  <div class="container">
+
+    <h2 class="titulo-principal text-center">
+      Un poco sobre nosotros
+    </h2>
+
+    <div class="row mt-5">
+
+      <div class="col-md-6 mb-4">
+        <div class="card-nosotros">
+          <h5>Nuestra misión</h5>
+          <p>
+            La Fundación Animalandia es una organización sin ánimo de lucro dedicada
+            al rescate y rehabilitación de animales en condición de calle,
+            vulnerabilidad o abandono, brindándoles una segunda oportunidad a través
+            de la adopción responsable.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card-nosotros">
+          <h5>Nuestra visión</h5>
+          <p>
+            Promover la sensibilización colectiva fomentando la esterilización,
+            el respeto por la vida, el NO al maltrato animal y la adopción responsable,
+            soñando con convertirnos en una organización líder en la protección
+            animal.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-nosotros text-center mt-4">
+      <p>¿Quieres conocer más sobre nuestra historia y labor?</p>
+      <a href="nosotros.php" class="btn btn-animalandia">
+        Conócenos
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
 
 
 
