@@ -108,6 +108,7 @@ body {
 }
 
 
+
 /*Ajuste para móvil- ocultarlo*/
 @media (max-width: 576px) {
     .home-text {
@@ -295,6 +296,38 @@ body { display: flex; flex-direction: column; }
 
 
 
+
+.btn-inicio-flotante {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #1e5aa8;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all .4s ease;
+  z-index: 99999; /* MUY IMPORTANTE */
+}
+
+.btn-inicio-flotante.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.btn-inicio-flotante:hover {
+  background: #163f75;
+}
 
 
 

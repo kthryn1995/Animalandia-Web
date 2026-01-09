@@ -12,7 +12,10 @@
 
     <!-- CSS propios -->
     <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/templates.css">
-    <link rel="stylesheet" href="/AnimalandiaWeb/src/css/inicio.css">
+    <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/inicio.css">
+   <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/comoayudar.css">
+    <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/donar.css">
+
         
 <!-- Tipografia -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,6 +25,10 @@
 </head>
 
 <body>
+
+
+
+
  <!-- Barra azul inicial de la pagina-->
 <div class="top-bar"></div>
 
@@ -33,13 +40,19 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
 
-        <!-- 🏠 ICONO INICIO -->
-        <a class="navbar-brand home-icon" href="index.php">
-    <span class="home-emoji">🏠</span>
-    <span class="home-text">Inicio</span>
-
+<!-- 🏠 ICONO + TEXTO INICIO (navbar) -->
+<a class="navbar-brand home-icon nav-link" href="inicio.php">
+  <span class="home-emoji">🏠</span>
+  <span class="home-text">Inicio</span>
 </a>
-        </a>
+
+
+
+
+
+
+
+       
 
         <!-- Botón responsive -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPublico">
@@ -49,9 +62,10 @@
         <!-- Links -->
         <div class="collapse navbar-collapse" id="menuPublico">
             <ul class="navbar-nav ms-auto">
+                
                 <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
                 <li class="nav-item"><a class="nav-link" href="adopciones.php">Adopciones</a></li>
-                <li class="nav-item"><a class="nav-link" href="ayudar.php">¿Cómo ayudar?</a></li>
+                <li class="nav-item"><a class="nav-link" href="comoayudar.php">¿Cómo ayudar?</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacto.php">Contáctanos</a></li>
             </ul>
         </div>
