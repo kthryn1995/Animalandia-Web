@@ -52,8 +52,6 @@
 
 
 
-       
-
         <!-- Botón responsive -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPublico">
             <span class="navbar-toggler-icon"></span>

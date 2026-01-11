@@ -31,6 +31,13 @@ $metodo = $_GET['metodo'] ?? '';
         Gracias por apoyar nuestra labor 🐾
       </p>
 
+      <div class="mb-3">
+  <a href="comoayudar.php" class="btn-volver">
+    ← Volver a Cómo ayudar
+  </a>
+</div>
+
+
       <form action="procesar_donacion.php" method="POST">
 
         <input type="hidden" name="fecha"
@@ -72,6 +79,8 @@ $metodo = $_GET['metodo'] ?? '';
         Cambiando vidas, una huellita a la vez 🐶🐱
       </p>
 
+
+      
     </div>
 
   </div>

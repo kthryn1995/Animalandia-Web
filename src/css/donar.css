@@ -132,3 +132,16 @@
     transform: translateY(0);
   }
 }
+
+
+.btn-volver {
+  display: inline-block;
+  color: #1e5aa8;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.btn-volver:hover {
+  text-decoration: underline;
+}
