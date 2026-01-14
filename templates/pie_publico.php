@@ -6,7 +6,7 @@
       <div class="col-md-5">
         <h5 class="footer-title">Animalandia</h5>
         <p class="footer-desc">
-          Animalandia es una fundación sin ánimo de lucro dedicada al rescate, cuidado y rehabilitación de animales en situación 
+          Animalandia es un refugio sin ánimo de lucro dedicada al rescate, cuidado y rehabilitación de animales en situación 
           de vulnerabilidad. Trabajamos para garantizar su bienestar físico y emocional, promoviendo la adopción responsable como 
           una oportunidad de vida digna y permanente. 
           Nuestro compromiso se basa en el respeto, la protección y la defensa de los derechos de los animales.

@@ -1,5 +1,12 @@
 <?php include("../../templates/cabecera_publica.php"); ?>
+    <link rel="stylesheet" href="/AnimalandiaWeb/src/css/comoayudar.css">
+
 <link rel="stylesheet" href="../../src/css/comoayudar.css">
+
+
+
+
+
 
 
 
@@ -16,6 +23,7 @@
         <button class="ayuda-btn" data-section="apadrinamiento">Apadrinamiento 🐾</button>
         <button class="ayuda-btn" data-section="voluntariado">Voluntariado 🤝</button>
         <button class="ayuda-btn" data-section="especie">Donación en especie 📦</button>
+         <button class="ayuda-btn" data-section="esterilizacion-vacunacion">Esterilizacion y vacunacion 🏥</button>
         <button class="ayuda-btn" data-section="difusion">Difusión 📢</button>
 
       </div>
@@ -234,6 +242,67 @@
 </div>
 
 
+<!-- ESTERILIZACIÓN Y VACUNACIÓN -->
+<section class="ayuda-section" id="esterilizacion-vacunacion">
+
+  <div class="ayuda-header">
+    <img src="../../src/img/logoanimalandia.png" alt="Animalandia" class="icono-seccion">
+    <h3 class="ayuda-titulo">Esterilización y Vacunación</h3>
+  </div>
+
+  <p class="ayuda-descripcion">
+    La esterilización y vacunación son actos de amor y responsabilidad que
+    salvan vidas. Gracias a tu apoyo, podemos brindar atención médica
+    preventiva a los animales de nuestro refugio, mejorando su salud,
+    bienestar y calidad de vida.
+  </p>
+
+  <div class="ayuda-contenido">
+
+    <!-- Texto -->
+    <div class="ayuda-texto">
+      <h4>¿Cómo puedes ayudar?</h4>
+
+      <ul class="ayuda-lista">
+        <li>🐾 Financiar esterilizaciones y vacunas para animales del refugio</li>
+        <li>💉 Aportar para medicamentos, desparasitantes y tratamientos antipulgas y garrapatas</li>
+        <li>💙 Realizar donaciones únicas o recurrentes</li>
+        <li>📢 Compartir nuestras campañas y ayudar a difundir nuestra labor</li>
+      </ul>
+
+      <p class="ayuda-frase">
+        Cada aporte nos acerca a un refugio más sano y a un futuro con menos abandono.
+      </p>
+
+      <div class="ayuda-datos">
+        <p><strong>📱 WhatsApp:</strong> 315395 4727</p>
+        <p><strong>💳 Nequi / Daviplata:</strong> 3153954727</p>
+        <p><strong>🏦 Bancolombia Ahorros:</strong> 76193550220</p>
+      </div>
+    </div>
+
+    <!-- Imagen -->
+    <div class="ayuda-imagen">
+      
+      <img src="../../src/img/ayuda/esterelizacion.png" alt="Esterilización y vacunación Animalandia">
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="ayuda-footer">
+    
+<img src="../../src/img/ayuda/codigowhatsapp.jpeg" alt="QR WhatsApp Animalandia">
+
+    <p>Síguenos en Instagram</p>
+    <a href="https://www.instagram.com/animalandia.38/" target="_blank">
+      @animalandia.38
+    </a>
+  </div>
+
+</section>
+
+
 
 
 
@@ -292,10 +361,6 @@
   </div>
 
 </div>
-
-
-
-
 
 
 

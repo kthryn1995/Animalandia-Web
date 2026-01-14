@@ -25,14 +25,14 @@
         </div>
       </div>
 
-      <!-- SLIDE 2 (Adopta o Apadrina) -->
+      <!-- SLIDE 2 (Apadrina) -->
       <div class="carousel-item">
         <img src="../../src/img/carrusel/adoptaoapadrina5.png"
              class="d-block w-100 carousel-img"
              alt="Adopción">
 
         <div class="carousel-overlay left">
-          <h2>Adopta o Apadrina</h2>
+          <h2>Apadrina</h2>
 
           <div class="carousel-buttons">
            <a href="adopciones.php" class="btn btn-primary" > Buscar en línea</a>

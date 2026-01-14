@@ -11,10 +11,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS propios -->
-    <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/templates.css">
-    <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/inicio.css">
-   <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/comoayudar.css">
-    <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/donar.css">
+    <link rel="stylesheet" href="/AnimalandiaWeb/src/css/templates.css">
+    <link rel="stylesheet" href="/AnimalandiaWeb/src/css/comoayudar.css">
+    <link rel="stylesheet" href="/AnimalandiaWeb/src/css/inicio.css">
+    <link rel="stylesheet" href="/AnimalandiaWeb/src/css/donar.css">
+    <link rel="stylesheet" href="/AnimalandiaWeb/src/css/contacto.css">
+
+
+
+  
+
 
         
 <!-- Tipografia -->
@@ -62,7 +68,6 @@
             <ul class="navbar-nav ms-auto">
                 
                 <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="adopciones.php">Adopciones</a></li>
                 <li class="nav-item"><a class="nav-link" href="comoayudar.php">¿Cómo ayudar?</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacto.php">Contáctanos</a></li>
             </ul>

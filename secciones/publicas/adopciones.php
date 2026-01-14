@@ -1,5 +1,0 @@
-<?php include("../../templates/cabecera_publica.php"); ?>
-
-<p> cuerpo de adopciones</p>
-
-<?php include("../../templates/pie_publico.php"); ?>
