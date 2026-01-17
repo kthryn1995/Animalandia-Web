@@ -43,8 +43,8 @@
 
                     <p class="mb-3">
                         📧 <strong>Correo</strong><br>
-                        <a href="mailto:rescatamebogota@gmail.com">
-                            rescatamebogota@gmail.com
+                        <a href="animalandiaanimalandia79@gmail.com">
+                           animalandiaanimalandia79@gmail.com
                         </a>
                     </p>
 

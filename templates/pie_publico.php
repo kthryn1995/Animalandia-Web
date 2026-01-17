@@ -22,7 +22,7 @@
 
         <ul class="footer-contact">
           <li><i class="bi bi-geo-alt"></i> Vía Armenia – Quindío</li>
-          <li><i class="bi bi-envelope"></i> johanaaraquel709@gmail.com</li>
+          <li><i class="bi bi-envelope"></i> animalandiaanimalandia79@gmail.com</li>
           <li><i class="bi bi-telephone"></i> +57 315 395 4727</li>
         </ul>
 
