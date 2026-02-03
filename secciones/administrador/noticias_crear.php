@@ -2,12 +2,13 @@
 
 <div class="container my-4">
 
-  <h2 class="mb-4">📰 Crear nueva noticia</h2>
+  
+h2 class="mb-4">📰 Crear nueva noticia</h2>
+  <form action="noticias_guardar.php" method="POST" enctype="multipart/form-data">
 
-  <form action="noticia_guardar.php" method="POST" enctype="multipart/form-data">
+<
 
-
-    <!-- TÍTULO -->
+    <!-- TÍTULO --> 
     <div class="mb-3">
       <label class="form-label">Título de la noticia</label>
       <input type="text" name="titulo" class="form-control" required>

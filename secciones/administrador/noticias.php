@@ -6,11 +6,11 @@ $sql = "SELECT * FROM noticias ORDER BY fecha DESC";
 $resultado = $conexion->query($sql);
 ?>
 
-<div class="container mt-4">
 
+<div class="container mt-4">
   <h2>📰 Gestión de Noticias</h2>
 
-  <a href="noticia_crear.php" class="btn btn-primary mb-3">
+  <a href="noticias_crear.php" class="btn btn-primary mb-3">
     ➕ Nueva noticia
   </a>
 
