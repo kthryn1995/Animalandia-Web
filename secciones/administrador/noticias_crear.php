@@ -3,10 +3,10 @@
 <div class="container my-4">
 
   
-h2 class="mb-4">📰 Crear nueva noticia</h2>
+<h2 class="mb-4">📰 Crear nueva noticia</h2>
   <form action="noticias_guardar.php" method="POST" enctype="multipart/form-data">
 
-<
+
 
     <!-- TÍTULO --> 
     <div class="mb-3">

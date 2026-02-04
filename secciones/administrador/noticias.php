@@ -38,10 +38,10 @@ $resultado = $conexion->query($sql);
               <?php endif; ?>
             </td>
             <td>
-              <a href="noticia_editar.php?id=<?= $noticia['idNoticias'] ?>"
+              <a href="noticias_editar.php?id=<?= $noticia['idNoticias'] ?>"
                  class="btn btn-warning btn-sm">✏️</a>
 
-              <a href="noticia_eliminar.php?id=<?= $noticia['idNoticias'] ?>"
+              <a href="noticias_eliminar.php?id=<?= $noticia['idNoticias'] ?>"
                  class="btn btn-danger btn-sm"
                  onclick="return confirm('¿Eliminar esta noticia?')">
                  🗑️
