@@ -115,31 +115,53 @@
 
 
 
+<?php
+require_once "../../configuraciones/bd.php";
+
+// consulta noticias
+$sql = "SELECT * FROM noticias ORDER BY fecha DESC";
+$resultado = $conexion->query($sql);
+?>
 
 <section class="noticias container my-5">
   <h2 class="section-title">Noticias de interés</h2>
 
   <div class="row mt-4">
 
-    <!-- NOTICIA (izquierda) -->
-    <div class="col-md-6">
-      <div class="noticia-card">
-        <img src="../../src/img/noticias/jornada.jpg" alt="Jornada de adopción">
+    <?php if ($resultado->num_rows > 0): ?>
+      
+      <?php while ($noticia = $resultado->fetch_assoc()): ?>
+        <div class="col-md-6 mb-4">
+          <div class="noticia-card">
 
-        <div class="noticia-body">
-          <h5>Jornada de adopción</h5>
-          <p>
-            Próximamente realizaremos una jornada de adopción para brindar
-            un hogar a muchos peluditos.
-          </p>
+            <img src="../../src/img/noticias/<?= $noticia['rutaFoto'] ?>" 
+                 alt="<?= htmlspecialchars($noticia['titulo']) ?>">
 
-          <a href="#" class="noticia-link">Ver más</a>
+            <div class="noticia-body">
+              <h5><?= htmlspecialchars($noticia['titulo']) ?></h5>
+
+              <p>
+                <?= substr(strip_tags($noticia['contenido']), 0, 950) ?>...
+              </p>
+
+            
+            </div>
+
+          </div>
         </div>
-      </div>
-    </div>
+      <?php endwhile; ?>
+
+    <?php else: ?>
+      <p class="text-center">📰 No hay noticias publicadas aún.</p>
+    <?php endif; ?>
+
+  </div>
+</section>
 
     <!-- INSTAGRAM (derecha) -->
-    <div class="col-md-6">
+    <div class="row mt-5">
+  <div class="col-12">
+      
       <div class="instagram-card">
         <img src="../../src/img/noticias/instagramnoticias.png" alt="Instagram Animalandia">
 

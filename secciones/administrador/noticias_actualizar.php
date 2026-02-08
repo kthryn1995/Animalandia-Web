@@ -1,34 +1,83 @@
 <?php
 require_once "../../configuraciones/bd.php";
 
-$conexion = $conexion;
+// ===============================
+// VALIDAR POST
+// ===============================
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    die("Acceso no permitido");
+}
 
-// 1. Recibir datos
-$id = $_POST['idNoticias'];
-$titulo = $_POST['titulo'];
-$contenido = $_POST['contenido'];
+// ===============================
+// RECIBIR DATOS
+// ===============================
+$id = intval($_POST['idNoticias'] ?? 0);
+$titulo = trim($_POST['titulo'] ?? '');
+$contenido = trim($_POST['contenido'] ?? '');
 
-// 2. Ver si se subió nueva imagen
-if (!empty($_FILES['foto']['name'])) {
+if ($id <= 0) {
+    die("❌ ID inválido");
+}
 
-    $nombreImagen = time() . "_" . $_FILES['foto']['name'];
-    $ruta = "../../src/img/noticias/" . $nombreImagen;
+if (empty($titulo) || empty($contenido)) {
+    die("❌ Título y contenido son obligatorios");
+}
 
-    move_uploaded_file($_FILES['foto']['tmp_name'], $ruta);
+// ===============================
+// IMAGEN (OPCIONAL)
+// ===============================
+$actualizarImagen = false;
+$nombreImagen = null;
+
+if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
+
+    $extensionesPermitidas = ['jpg', 'jpeg', 'png', 'webp'];
+    $extension = strtolower(pathinfo($_FILES['imagen']['name'], PATHINFO_EXTENSION));
+
+    if (!in_array($extension, $extensionesPermitidas)) {
+        die("❌ Formato de imagen no permitido");
+    }
+
+    $nombreImagen = time() . "_" . basename($_FILES['imagen']['name']);
+
+    $rutaDestino = $_SERVER['DOCUMENT_ROOT'] . "/AnimalandiaWeb/src/img/noticias/" . $nombreImagen;
+
+    if (!move_uploaded_file($_FILES['imagen']['tmp_name'], $rutaDestino)) {
+        die("❌ Error al subir la imagen");
+    }
+
+    $actualizarImagen = true;
+}
+
+// ===============================
+// UPDATE
+// ===============================
+if ($actualizarImagen) {
 
     $sql = "UPDATE noticias 
-            SET titulo='$titulo', contenido='$contenido', rutaFoto='$nombreImagen'
-            WHERE idNoticias=$id";
+            SET titulo = ?, contenido = ?, rutaFoto = ?
+            WHERE idNoticias = ?";
+
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("sssi", $titulo, $contenido, $nombreImagen, $id);
+
 } else {
 
     $sql = "UPDATE noticias 
-            SET titulo='$titulo', contenido='$contenido'
-            WHERE idNoticias=$id";
+            SET titulo = ?, contenido = ?
+            WHERE idNoticias = ?";
+
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("ssi", $titulo, $contenido, $id);
 }
 
-// 3. Ejecutar
-if ($conexion->query($sql)) {
+// ===============================
+// EJECUTAR
+// ===============================
+if ($stmt->execute()) {
     header("Location: noticias.php");
+    exit;
 } else {
-    echo "❌ Error al actualizar: " . $conexion->error;
+    echo "❌ Error al actualizar: " . $stmt->error;
 }
+

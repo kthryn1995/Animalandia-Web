@@ -12,6 +12,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/main.css">
   <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/templatesadministrador.css">
+  <link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/inicio.css">
+
 </head>
 
 <body class="layout-admin">
