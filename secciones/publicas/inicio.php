@@ -32,10 +32,10 @@
              alt="Adopción">
 
         <div class="carousel-overlay left">
-          <h2>Apadrina</h2>
+          <h2>Apadrina</h2> 
 
           <div class="carousel-buttons">
-           <a href="adopciones.php" class="btn btn-primary" > Buscar en línea</a>
+           <a href="https://www.instagram.com/animalandia.38/" target="_blank" class="btn btn-primary" > Buscar en línea</a>
 
             </a>
             <a href="https://wa.me/573153954727" target="_blank" class="btn btn-outline-light">
@@ -159,30 +159,30 @@ $resultado = $conexion->query($sql);
 </section>
 
     <!-- INSTAGRAM (derecha) -->
-    <div class="row mt-5">
-  <div class="col-12">
-      
-      <div class="instagram-card">
-        <img src="../../src/img/noticias/instagramnoticias.png" alt="Instagram Animalandia">
+  <div class="row mt-5">
+  <div class="col-12 d-flex justify-content-center">
 
-        <div class="instagram-body">
-          <h5>Síguenos en Instagram</h5>
-          <p>
-            Entérate de todas nuestras noticias, rescates,
-            jornadas y adopciones.
-          </p>
+    <div class="instagram-card">
+      <img src="../../src/img/noticias/instagramnoticias.png" alt="Instagram Animalandia">
 
-          <a href="https://www.instagram.com/animalandia.38/"
-             target="_blank"
-             class="btn btn-instagram">
-            Ir a Instagram
-          </a>
-        </div>
+      <div class="instagram-body">
+        <h5>Síguenos en Instagram</h5>
+        <p>
+          Entérate de todas nuestras noticias, rescates,
+          jornadas y adopciones.
+        </p>
+
+        <a href="https://www.instagram.com/animalandia.38/"
+           target="_blank"
+           class="btn btn-instagram">
+          Ir a Instagram
+        </a>
       </div>
     </div>
 
   </div>
-</section>
+</div>
+
 
 
 <section class="sobre-nosotros-animalandia">

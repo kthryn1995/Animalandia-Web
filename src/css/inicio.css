@@ -219,29 +219,26 @@ Estilo de tarjeta más bonito
    BLOQUE INSTAGRAM
    =============================== */
 
+
 .instagram-card {
   background-color: #ffffff;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 
-.instagram-card img {
-  
+  max-width: 420px;     /* ⬅️ controla el tamaño REAL */
   width: 100%;
-  height: 260px;        /* prueba 220–280 */
-  object-fit: cover;   /* no se deforma */
-  border-radius: 12px;
-  max-width: 420px;   /* ajusta: 360, 400, 420 */
-  margin: 0 auto;
 }
 
-  
+/* Imagen superior */
+.instagram-card img {
+  width: 100%;
+  height: 560px;        /* ⬅️ tamaño equilibrado */
+  object-fit: cover;
+  display: block;
+}
 
-
+/* Contenido */
 .instagram-body {
   padding: 22px;
   text-align: center;
