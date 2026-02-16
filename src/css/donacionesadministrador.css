@@ -97,3 +97,309 @@ body {
 .btn-accion:hover {
   opacity: 0.85;
 }
+
+
+
+/* ===============================
+   FORMULARIO DONACIONES MANUALES-ADMIN
+   =============================== */
+
+.container {
+  max-width: 720px;
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+.container h3 {
+  text-align: center;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.container label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+
+
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+.mb-3,
+.mb-4 {
+  margin-bottom: 18px !important;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btn-success {
+  background-color: #198754;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
+
+.btn-secondary {
+  margin-left: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+
+
+
+/* =========================
+   RESUMEN DE DONACIONES
+========================= */
+
+.resumen {
+  border-radius: 16px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border: none;
+  height: 100%;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.resumen:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.10);
+}
+
+.resumen h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.resumen h4 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: #212529;
+}
+
+/* =========================
+   COLORES POR ESTADO
+========================= */
+
+.resumen.aprobado {
+  background: linear-gradient(135deg, #e8fff2, #f6fffb);
+  border-left: 6px solid #28a745;
+}
+
+.resumen.pendiente {
+  background: linear-gradient(135deg, #fff7e6, #fffdf8);
+  border-left: 6px solid #ffc107;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .resumen h4 {
+    font-size: 22px;
+  }
+}
+
+
+
+/* =========================
+   TARJETAS RESUMEN
+========================= */
+
+.resumen {
+  position: relative;
+  border-radius: 18px;
+  padding: 22px 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  height: 100%;
+  transition: all .3s ease;
+  overflow: hidden;
+}
+
+.resumen:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Texto */
+.resumen h6 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+
+.resumen h4 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: #111827;
+}
+
+/* Icono */
+.resumen .icono {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 38px;
+  opacity: .18;
+}
+
+/* Colores por estado */
+.resumen.aprobado {
+  border-left: 6px solid #22c55e;
+  background: linear-gradient(135deg, #ecfdf5, #ffffff);
+}
+
+.resumen.aprobado .icono {
+  color: #22c55e;
+}
+
+.resumen.pendiente {
+  border-left: 6px solid #facc15;
+  background: linear-gradient(135deg, #fffbeb, #ffffff);
+}
+
+.resumen.pendiente .icono {
+  color: #facc15;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
+
+body {
+  background-color: #f3f4f6;
+}
+
+.card-admin {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   HEADER DONACIONES
+========================= */
+
+.header-donaciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header-donaciones h3 {
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =========================
+   BOTÓN EXPORTAR
+========================= */
+
+.btn-outline-success {
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+/* =========================
+   FILTROS DONACIONES
+========================= */
+
+.filtros-donaciones {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.filtros-donaciones .form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.filtros-donaciones .form-control,
+.filtros-donaciones .form-select {
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.filtros-donaciones .form-control:focus,
+.filtros-donaciones .form-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+.filtros-donaciones button.btn-primary {
+  border-radius: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+}
+
+.filtros-donaciones .btn-outline-secondary {
+  border-radius: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filtros-donaciones {
+    padding: 15px;
+  }
+}
