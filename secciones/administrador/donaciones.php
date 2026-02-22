@@ -55,18 +55,16 @@ $totales = $conexion->query($sqlTotal)->fetch_assoc();
   <meta charset="UTF-8">
   <title>Donaciones | Admin</title>
 
-  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../src/css/donacionesadministrador.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/animalandiaweb/src/css/donacionesadministrador.css">
 </head>
 
 <body>
 
-<div class="container my-5">
+<div class="container-fluid my-5 px-4">
 
-  <!-- =========================
-       HEADER
-  ========================= -->
-  <div class="header-donaciones mb-4">
+  <!-- HEADER -->
+  <div class="card-admin mb-4 header-donaciones">
     <h3>💰 Donaciones recibidas</h3>
 
     <div>
@@ -74,146 +72,129 @@ $totales = $conexion->query($sqlTotal)->fetch_assoc();
         ➕ Registrar donación
       </a>
 
-     <a href="exportar_donaciones_excel.php?<?= http_build_query($_GET) ?>"
-   class="btn btn-outline-success mb-3">
-  📤 Exportar a Excel
-</a>
-
+      <a href="exportar_donaciones_excel.php?<?= http_build_query($_GET) ?>"
+         class="btn btn-outline-success ms-2">
+        📤 Exportar a Excel
+      </a>
     </div>
   </div>
 
-  <!-- =========================
-       FILTROS
-  ========================= -->
-  <form method="GET" class="row g-3 mb-4 filtros-donaciones">
+  <!-- CONTENIDO -->
+  <div class="row g-4">
 
-    <div class="col-md-3">
-      <label>Desde</label>
-      <input type="date" name="desde" class="form-control"
-        value="<?= $_GET['desde'] ?? '' ?>">
-    </div>
+    <!-- COLUMNA IZQUIERDA: FILTROS + RESUMEN -->
+    <div class="col-lg-4">
 
-    <div class="col-md-3">
-      <label>Hasta</label>
-      <input type="date" name="hasta" class="form-control"
-        value="<?= $_GET['hasta'] ?? '' ?>">
-    </div>
+      <form method="GET" class="card-admin mb-4 filtros-donaciones">
+        <div class="mb-3">
+          <label class="form-label">Desde</label>
+          <input type="date" name="desde" class="form-control" value="<?= $_GET['desde'] ?? '' ?>">
+        </div>
 
-    <div class="col-md-3">
-      <label>Método</label>
-      <select name="metodo" class="form-select">
-        <option value="">Todos</option>
-        <option value="efectivo">Efectivo</option>
-        <option value="transferencia">Transferencia</option>
-        <option value="nequi">Nequi</option>
-        <option value="daviplata">Daviplata</option>
-      </select>
-    </div>
+        <div class="mb-3">
+          <label class="form-label">Hasta</label>
+          <input type="date" name="hasta" class="form-control" value="<?= $_GET['hasta'] ?? '' ?>">
+        </div>
 
-    <div class="col-md-3">
-      <label>Estado</label>
-      <select name="estado" class="form-select">
-        <option value="">Todos</option>
-        <option value="aprobado">Aprobado</option>
-        <option value="pendiente">Pendiente</option>
-      </select>
-    </div>
+        <div class="mb-3">
+          <label class="form-label">Método</label>
+          <select name="metodo" class="form-select">
+            <option value="">Todos</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="transferencia">Transferencia</option>
+            <option value="nequi">Nequi</option>
+            <option value="daviplata">Daviplata</option>
+          </select>
+        </div>
 
-    <div class="col-12 text-end">
-      <button class="btn btn-primary">🔍 Filtrar</button>
-      <a href="donaciones.php" class="btn btn-secondary">🧹 Limpiar</a>
-    </div>
+        <div class="mb-3">
+          <label class="form-label">Estado</label>
+          <select name="estado" class="form-select">
+            <option value="">Todos</option>
+            <option value="aprobado">Aprobado</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="rechazada">Rechazada</option>
+          </select>
+        </div>
 
-  </form>
+        <button class="btn btn-primary w-100 mb-2">🔍 Filtrar</button>
+        <a href="donaciones.php" class="btn btn-secondary w-100">🧹 Limpiar</a>
+      </form>
 
-  <!-- =========================
-       TOTALES
-  ========================= -->
-  <div class="row mb-4">
-
-    <div class="col-md-3">
-      <div class="card resumen">
+      <div class="resumen mb-3">
         <h6>Total donaciones</h6>
         <h4><?= $totales['total_donaciones'] ?></h4>
       </div>
-    </div>
 
-    <div class="col-md-3">
-      <div class="card resumen">
+      <div class="resumen mb-3">
         <h6>Monto total</h6>
         <h4>$<?= number_format($totales['total_monto'], 2) ?></h4>
       </div>
-    </div>
 
-    <div class="col-md-3">
-      <div class="card resumen aprobado">
+      <div class="resumen aprobado mb-3">
         <h6>Aprobadas</h6>
         <h4>$<?= number_format($totales['total_aprobado'], 2) ?></h4>
       </div>
-    </div>
 
-    <div class="col-md-3">
-      <div class="card resumen pendiente">
+      <div class="resumen pendiente">
         <h6>Pendientes</h6>
         <h4>$<?= number_format($totales['total_pendiente'], 2) ?></h4>
       </div>
+
     </div>
 
-  </div>
+    <!-- COLUMNA DERECHA: TABLA -->
+    <div class="col-lg-8">
 
-  <!-- =========================
-       TABLA
-  ========================= -->
-  <div class="card-admin">
+      <div class="card-admin">
+        <div class="table-responsive">
+          <table class="table table-donaciones align-middle mb-0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Donante</th>
+                <th>Monto</th>
+                <th>Método</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th class="text-center">Acciones</th>
+              </tr>
+            </thead>
 
-    <div class="table-responsive">
-      <table class="table table-donaciones align-middle">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Donante</th>
-            <th>Monto</th>
-            <th>Método</th>
-            <th>Fecha</th>
-            <th>Estado</th>
-            <th class="text-center">Acciones</th>
-          </tr>
-        </thead>
+            <tbody>
+              <?php if ($resultado->num_rows > 0) { ?>
+                <?php while ($d = $resultado->fetch_assoc()) { ?>
+                  <tr>
+                    <td><?= $d['idDonacion'] ?></td>
+                    <td><?= htmlspecialchars($d['nombreDonante']) ?></td>
+                    <td><strong>$<?= number_format($d['monto'], 2) ?></strong></td>
+                    <td><?= ucfirst($d['metodo']) ?></td>
+                    <td><?= date("d/m/Y", strtotime($d['fecha'])) ?></td>
+                    <td>
+                      <span class="estado <?= $d['estado'] ?>">
+                        <?= ucfirst($d['estado']) ?>
+                      </span>
+                    </td>
+                    <td class="text-center">
+                      <a href="donacion_estado.php?id=<?= $d['idDonacion'] ?>&estado=aprobado"
+                         class="btn-accion aprobar">✔</a>
+                      <a href="donacion_estado.php?id=<?= $d['idDonacion'] ?>&estado=rechazada"
+                         class="btn-accion rechazar">✖</a>
+                    </td>
+                  </tr>
+                <?php } ?>
+              <?php } else { ?>
+                <tr>
+                  <td colspan="7" class="text-center text-muted">
+                    No hay donaciones registradas
+                  </td>
+                </tr>
+              <?php } ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-        <tbody>
-        <?php if ($resultado->num_rows > 0) { ?>
-          <?php while ($d = $resultado->fetch_assoc()) { ?>
-            <tr>
-              <td><?= $d['idDonacion'] ?></td>
-              <td><?= htmlspecialchars($d['nombreDonante']) ?></td>
-              <td><strong>$<?= number_format($d['monto'], 2) ?></strong></td>
-              <td><?= ucfirst($d['metodo']) ?></td>
-              <td><?= date("d/m/Y", strtotime($d['fecha'])) ?></td>
-
-              <td>
-                <span class="estado <?= $d['estado'] ?>">
-                  <?= ucfirst($d['estado']) ?>
-                </span>
-              </td>
-
-              <td class="text-center">
-                <a href="donacion_estado.php?id=<?= $d['idDonacion'] ?>&estado=aprobado"
-                   class="btn-accion aprobar">✔</a>
-
-                <a href="donacion_estado.php?id=<?= $d['idDonacion'] ?>&estado=rechazada"
-                   class="btn-accion rechazar">✖</a>
-              </td>
-            </tr>
-          <?php } ?>
-        <?php } else { ?>
-          <tr>
-            <td colspan="7" class="text-center text-muted">
-              No hay donaciones registradas
-            </td>
-          </tr>
-        <?php } ?>
-        </tbody>
-      </table>
     </div>
 
   </div>

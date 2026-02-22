@@ -1,0 +1,70 @@
+/* ===============================
+   FORMULARIO DONACIONES MANUALES-ADMIN
+   =============================== */
+
+.container {
+  max-width: 720px;
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+.container h3 {
+  text-align: center;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.container label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+
+
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+.mb-3,
+.mb-4 {
+  margin-bottom: 18px !important;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btn-success {
+  background-color: #198754;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
+
+.btn-secondary {
+  margin-left: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
