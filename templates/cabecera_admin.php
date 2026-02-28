@@ -20,7 +20,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold text-success" href="index.php">
+    <a class="navbar-brand fw-bold text-success" href="inicio_Administrador.php">
       Animalandia
     </a>
 
