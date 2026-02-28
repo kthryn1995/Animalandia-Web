@@ -30,9 +30,9 @@
 
     <div class="collapse navbar-collapse" id="menuAdmin">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Mi perfil</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Donaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="inicio_Administrador.php">Mi perfil</a></li>
+        <li class="nav-item"><a class="nav-link" href="cerrar.php">Cerrar sesion</a></li>
+        
       </ul>
     </div>
   </div>

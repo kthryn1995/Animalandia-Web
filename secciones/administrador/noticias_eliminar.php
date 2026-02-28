@@ -1,3 +1,5 @@
+<?php include("../../templates/cabecera_admin.php"); ?>
+
 <?php
 require_once "../../configuraciones/bd.php";
 
@@ -31,3 +33,4 @@ if ($conexion->query($sql)) {
     echo "❌ Error al eliminar: " . $conexion->error;
 }
 
+<?php include("../../templates/pie_admin.php"); ?>

@@ -1,3 +1,4 @@
+<?php include("../../templates/cabecera_admin.php"); ?>
 <?php
 // ===============================
 // CABECERA + CONEXIÓN

@@ -1,3 +1,6 @@
+
+<?php include("../../templates/cabecera_admin.php"); 
+?>
 <?php
 require_once "../../configuraciones/bd.php";
 
@@ -200,6 +203,6 @@ $totales = $conexion->query($sqlTotal)->fetch_assoc();
   </div>
 
 </div>
-
+<?php include("../../templates/pie_admin.php"); ?>
 </body>
 </html>
