@@ -90,15 +90,8 @@
   <h2>¿Cómo puedes ayudar?</h2>
 
   <div class="row mt-4">
-    <div class="col-md-4">
-      <a href="adopciones.php" class="ayuda-card">
-        <img src="../../src/img/ayuda/adoptanos.png">
-        <h5>Adopta</h5>
-      </a>
-    </div>
-
-    <div class="col-md-4">
-      <a href="apadrina.php" class="ayuda-card">
+ <div class="col-md-4">
+      <a href="https://www.instagram.com/animalandia.38/" class="ayuda-card">
         <img src="../../src/img/ayuda/apadrina.png">
         <h5>Apadrina</h5>
       </a>
@@ -198,7 +191,7 @@ $resultado = $conexion->query($sql);
         <div class="card-nosotros">
           <h5>Nuestra misión</h5>
           <p>
-            La Fundación Animalandia es una organización sin ánimo de lucro dedicada
+            El refugio Animalandia es una organización sin ánimo de lucro dedicada
             al rescate y rehabilitación de animales en condición de calle,
             vulnerabilidad o abandono, brindándoles una segunda oportunidad a través
             de la adopción responsable.

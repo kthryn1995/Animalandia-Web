@@ -11,13 +11,16 @@ $metodo = $_GET['metodo'] ?? '';
 
     <!-- COLUMNA IZQUIERDA (IMAGEN) -->
     <div class="donacion-img">
-      <img src="../../src/img/donaciones/donacion.jpg"
-           alt="Ayuda Animalandia">
-      <div class="donacion-img-text">
-        <h3>Tu ayuda salva vidas</h3>
-        <p>Cada aporte cuenta para rescatar y proteger</p>
-      </div>
-    </div>
+
+<img src="../../src/img/donaciones/donacion.jpg"
+     alt="Ayuda Animalandia">
+
+<div class="donacion-img-text">
+<h3>Tu ayuda salva vidas</h3>
+<p>Cada aporte cuenta para rescatar y proteger</p>
+</div>
+
+</div>
 
     <!-- COLUMNA DERECHA (FORMULARIO) -->
     <div class="donacion-form">

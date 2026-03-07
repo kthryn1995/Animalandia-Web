@@ -50,56 +50,80 @@ switch ($metodo) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Finalizar Donación - Animalandia</title>
-    <link rel="stylesheet" href="../../librerias/bootstrap/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<title>Finalizar Donación - Animalandia</title>
+
+<link rel="stylesheet" href="../../librerias/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/ANIMALANDIAWEB/src/css/pagoqr.css">
+
 </head>
-<body class="bg-light">
 
-<div class="container mt-5">
-    <div class="card shadow-lg p-4 text-center">
+<body>
 
-        <h2 class="mb-3">🐾 Gracias por apoyar Animalandia</h2>
+<div class="donacion-layout">
 
-        <p><strong>Donante:</strong> <?= htmlspecialchars($nombre); ?></p>
-        <p><strong>Método seleccionado:</strong> <?= $metodoMostrar; ?></p>
+    <!-- IMAGEN -->
+    <div class="donacion-img">
 
-        <hr>
+        <img src="/ANIMALANDIAWEB/src/img/donaciones/donacion.jpg" alt="Ayuda Animalandia">
 
-        <h4 class="text-success fw-bold">
-            Monto a pagar: $<?= number_format($monto, 0, ',', '.'); ?>
-        </h4>
-
-        <p class="text-muted">
-            Referencia: <strong>DON-<?= $id; ?></strong>
-        </p>
-
-        <hr>
-
-        <h5>Escanea el código QR oficial</h5>
-
-        <?php if ($qr != ""): ?>
-            <img src="<?= $qr; ?>" 
-                 alt="Código QR" 
-                 width="250" 
-                 class="my-3 img-fluid">
-        <?php else: ?>
-            <p class="text-danger">No se encontró QR para este método.</p>
-        <?php endif; ?>
-
-        <p class="mt-3"><?= $cuenta; ?></p>
-
-        <div class="alert alert-warning mt-3">
-            📌 Después de realizar el pago, conserva el comprobante.
-        </div>
-
-        <div class="mt-4">
-            <a href="inicio.php" class="btn btn-success btn-lg">
-                     Volver al inicio
-            </a>
+        <div class="donacion-img-text">
+            <h3>Tu ayuda salva vidas</h3>
+            <p>Cada aporte cuenta para rescatar y proteger</p>
         </div>
 
     </div>
+
+
+    <!-- FORMULARIO -->
+    <div class="donacion-form">
+
+        <div class="card shadow-lg p-4 text-center">
+
+            <h2 class="mb-3">🐾 Gracias por apoyar Animalandia</h2>
+
+            <p><strong>Donante:</strong> <?= htmlspecialchars($nombre); ?></p>
+            <p><strong>Método seleccionado:</strong> <?= $metodoMostrar; ?></p>
+
+            <hr>
+
+            <h4 class="text-success fw-bold">
+                Monto a pagar: $<?= number_format($monto, 0, ',', '.'); ?>
+            </h4>
+
+            <p class="text-muted">
+                Referencia: <strong>DON-<?= $id; ?></strong>
+            </p>
+
+            <hr>
+
+            <h5>Escanea el código QR oficial</h5>
+
+            <?php if ($qr != ""): ?>
+                <img src="<?= $qr; ?>" 
+                     alt="Código QR" 
+                     width="250" 
+                     class="my-3 img-fluid">
+            <?php else: ?>
+                <p class="text-danger">No se encontró QR para este método.</p>
+            <?php endif; ?>
+
+            <p class="mt-3"><?= $cuenta; ?></p>
+
+            <div class="alert alert-warning mt-3">
+                📌 Después de realizar el pago, conserva el comprobante.
+            </div>
+
+            <div class="mt-4">
+                <a href="inicio.php" class="btn btn-success btn-lg">
+                    Volver al inicio
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 
 </body>

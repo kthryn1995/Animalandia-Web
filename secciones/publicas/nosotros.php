@@ -112,7 +112,7 @@
   <div class="row mt-4">
     <div class="col-md-4">
       <div class="equipo-card">
-        <img src="../../src/img/nosotros/fundadora.jpeg">
+        <img src="../../src/img/nosotros/fundadora.png">
         <h5>Kelly Jhoana Araque</h5>
         <p>Fundadora y directora Fundación Animalandia</p>
       </div>
@@ -148,9 +148,9 @@
     a nuestra fundación.
   </p>
 
-  <a href="comoayudar.php" class="btn btn-primary">
-    Cómo ayudar
-  </a>
+  <a href="comoayudar.php" class="btn btn-primary btn-ayudar">
+  ¿Cómo ayudar?
+</a>
 </section>
 
 

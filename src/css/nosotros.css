@@ -251,31 +251,60 @@
 }
 
 /* Botón */
+
+
 .btn-ayudar {
   display: inline-block;
-  padding: 14px 42px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 22px 80px; /* más grande */
+  font-size: 1.4rem; /* texto más grande */
+  font-weight: 700;
   color: white;
   background: linear-gradient(
     135deg,
     var(--color-principal),
     var(--color-secundario)
   );
-  border-radius: 50px;
+  border-radius: 60px;
   text-decoration: none;
-  box-shadow: 0 18px 40px rgba(47, 79, 255, 0.25);
+  letter-spacing: 1px;
+  box-shadow: 0 20px 50px rgba(47, 79, 255, 0.35);
   transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* efecto hover */
 .btn-ayudar:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 26px 55px rgba(47, 79, 255, 0.35);
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 35px 70px rgba(47, 79, 255, 0.45);
+}
+
+/* efecto brillo */
+.btn-ayudar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.btn-ayudar:hover::before {
+  left: 130%;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .btn-ayudar {
+    padding: 18px 55px;
+    font-size: 1.2rem;
+  }
+
   .nosotros-cta h2 {
     font-size: 1.8rem;
   }
 }
+
