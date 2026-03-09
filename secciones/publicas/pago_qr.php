@@ -24,19 +24,19 @@ $nombre = $donacion['nombreDonante'];
 switch ($metodo) {
     case 'nequi':
         $qr = "../../src/img/codigosQR/qr_nequi_oficial.png";
-        $cuenta = "Nequi: 3001234567";
+        $cuenta = "Nequi: 3153954727";
         $metodoMostrar = "Nequi";
         break;
 
     case 'daviplata':
         $qr = "../../src/img/codigosQR/qr_daviplata_oficial.png";
-        $cuenta = "Daviplata: 3109876543";
+        $cuenta = "Daviplata: 3153954727";
         $metodoMostrar = "Daviplata";
         break;
 
     case 'transferencia':
-        $qr = "../../src/img/codigosQR/qr_bancolombia_oficial.png";
-        $cuenta = "Cuenta Ahorros Bancolombia: 123456789";
+        $qr = "../../src/img/codigosQR/qr_bancolombia_oficial.JPG";
+        $cuenta = "Cuenta Ahorros Bancolombia: 76193550220";
         $metodoMostrar = "Transferencia Bancaria";
         break;
 
@@ -110,10 +110,7 @@ switch ($metodo) {
 
             <p class="mt-3"><?= $cuenta; ?></p>
 
-            <div class="alert alert-warning mt-3">
-                📌 Después de realizar el pago, conserva el comprobante.
-            </div>
-
+           
             <div class="mt-4">
                 <a href="inicio.php" class="btn btn-success btn-lg">
                     Volver al inicio

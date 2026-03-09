@@ -72,9 +72,11 @@ $metodo = $_GET['metodo'] ?? '';
                  min="1000" required>
         </div>
 
-        <button type="submit" class="btn-donar">
-          Donar ahora
-        </button>
+      <div class="mt-4">
+    <a href="inicio.php" class="btn btn-success btn-lg btn-volver">
+        Volver al inicio
+    </a>
+</div>
 
       </form>
 

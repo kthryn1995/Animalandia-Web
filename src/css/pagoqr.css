@@ -55,7 +55,6 @@ body{
     flex: 1;
     padding: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -64,7 +63,8 @@ body{
     border-radius: 18px;
     border: none;
     max-width: 420px;
-    background: white;
+    width: 100%;
+    padding: 35px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
@@ -99,6 +99,13 @@ body{
     padding: 12px 35px;
     font-size: 17px;
     border-radius: 30px;
+    font-weight: 600;
+}
+
+.btn-volver{
+    display: block;
+    width: 100%;
+    margin-top: 25px;
 }
 
 /* RESPONSIVE */
