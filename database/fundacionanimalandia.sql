@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-03-2026 a las 21:47:35
+-- Tiempo de generación: 20-03-2026 a las 21:45:03
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -55,25 +55,6 @@ CREATE TABLE `donacion` (
   `nombreDonante` varchar(100) NOT NULL,
   `estado` enum('aprobado','pendiente','rechazada') NOT NULL DEFAULT 'pendiente'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Volcado de datos para la tabla `donacion`
---
-
-INSERT INTO `donacion` (`idDonacion`, `monto`, `fecha`, `metodo`, `Administrador_idadministrador`, `nombreDonante`, `estado`) VALUES
-(1, 20000.00, '2026-02-13 17:05:31', 'nequi', NULL, 'Katherine Tobon', 'pendiente'),
-(2, 20000.00, '2026-02-13 17:05:42', 'daviplata', NULL, 'Katherine Tobon', 'rechazada'),
-(3, 20000.00, '2026-02-13 17:06:25', 'daviplata', NULL, 'Katherine Tobon', 'aprobado'),
-(6, 25000.00, '2026-02-16 18:45:43', 'efectivo', NULL, 'Wesley Castañeda', 'aprobado'),
-(7, 50000.00, '2026-02-16 19:25:24', 'efectivo', NULL, 'Kelly Jhoana Araque', 'aprobado'),
-(8, 1000.00, '2026-02-28 21:48:36', 'nequi', NULL, 'Katherine Alcaráz', 'pendiente'),
-(9, 1000.00, '2026-02-28 21:57:30', 'nequi', NULL, 'Sebastian', 'pendiente'),
-(10, 2000.00, '2026-02-28 22:26:30', 'nequi', NULL, 'Wesley', 'pendiente'),
-(11, 1000.00, '2026-02-28 23:25:33', 'nequi', NULL, 'Deisy Henao', 'pendiente'),
-(12, 1000.00, '2026-02-28 23:29:17', 'nequi', NULL, 'Deisy Henao', 'pendiente'),
-(13, 3000.00, '2026-02-28 23:41:09', 'nequi', NULL, 'Lesly Zapata', 'pendiente'),
-(14, 1000.00, '2026-03-07 14:21:55', 'nequi', NULL, 'Wesley Castañeda', 'pendiente'),
-(15, 1000.00, '2026-03-09 19:44:48', 'nequi', NULL, 'Judith Alcaraz', 'pendiente');
 
 -- --------------------------------------------------------
 
@@ -137,7 +118,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de la tabla `donacion`
 --
 ALTER TABLE `donacion`
-  MODIFY `idDonacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idDonacion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `noticias`
